@@ -4,12 +4,17 @@
 void main()
 
 {
-	char x;
-	clrscr();
-	printf("\n Enter Any Character : ");
-	scanf("%c",&x);
 
-	printf("\n Input Character is : %c" ,x-32);
-	printf("\n ASCII code is : %d" ,x-32);
+	char ch;
+
+	printf("\n Enter any charchater : ");
+	scanf("%c",&ch);
+
+	if (ch >= 'A' && ch <= 'Z')
+	ch = ch +32;
+	else if (ch >='a' && ch<= 'z' )
+	ch = ch -32;
+
+	printf("converted character : %c",ch);
 	getch();
 }
